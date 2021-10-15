@@ -1,0 +1,76 @@
+import { Meteor } from 'meteor/meteor';
+import React from 'react';
+import FontAwesome from 'react-fontawesome';
+import StyledLSForm from '../elements/StyledLSForm';
+
+const LSForm = (props: any): JSX.Element => {
+    const { type } = props;
+    const [editable, setEditable] = React.useState<boolean>(false);
+    //Si title = actue le titre sera Actu sinon Votre nom
+    const title: string = type === "actu" ? "Actu" : "Votre nom"
+    const value: string = type === "actu" ? Meteor.user().profile.actue : Meteor.user().username;
+    const [state, setState] = React.useState<string>(value);
+
+    const toggleEditable = (): void => {
+        if (!editable) {
+            setEditable(true);
+        } else {
+            
+        }
+    }
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
+        const newValue: string = e.target.value;
+        setState(nawValue)
+        
+        /*
+        
+        if (type === "actu") {
+            Meteor.users.update({ _id: Meteor.userId() }, {
+                $set: {
+                    "profile.actu": newValue
+                }
+            })
+        } else {
+            Meteor.call('user.username', Meteor.userId(), newValue)
+        }
+
+        */
+    }
+    return (
+        <StyledLSForm>
+            <span className="LSForm--title">
+                {title}
+            </span>
+            {!editable ? (
+                <div className="LSForm--container">
+                    <input
+                        readOnly={true}
+                        className="LSForm--input __border"
+                        value={state}
+                    />
+                    <FontAwesome
+                        className="LSForm--icon"
+                        name="pen"
+                        onClick={toggleEditable}
+                    />
+                </div>
+            ) : (
+                    <div className="LSForm--container">
+                        <input
+                            readOnly={false}
+                            className="LSForm--input __border"
+                            value={state}
+                            onChange={handleChange}
+                        />
+                        <FontAwesome
+                            className="LSForm--icon"
+                            name="check"
+                            onClick={toggleEditable}
+                        />
+                    </div>
+                )}
+        </StyledLSForm>
+    )
+}
+export default LSForm;

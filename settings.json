@@ -1,0 +1,24 @@
+{
+    "services": {
+        "google": {
+          "loginStyle": "popup",
+          "clientId": "462249314611-f50ks34v5al9ha5nekaavf29ggu865s9.apps.googleusercontent.com",
+          "secret": "kqijr68J0Nw1fukBaJyImzeW"
+        },
+        "facebook": {
+          "loginStyle": "popup",
+          "appId": "XXX",
+          "secret": "XXX"
+        },
+        "github": {
+          "loginStyle": "popup",
+          "clientId": "XXX",
+          "secret": "XXX"
+        },
+        "twitter": {
+          "loginStyle": "popup",
+          "consumerKey": "XXX",
+          "secret": "XXX"
+        }
+    }
+ }

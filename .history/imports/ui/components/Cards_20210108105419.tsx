@@ -1,0 +1,52 @@
+import React from 'react';
+
+import Card from 'react-bootstrap/Card';
+
+import Button from 'react-bootstrap/Button';
+
+const Cards: React.FC = () => {
+    return (
+        <Card style={{ width: '105px' }}>
+            <Card.Img variant="top" src="holder.js/105px125" />
+            <Card.Body>
+                <Card.Title>TF1</Card.Title>
+                <Card.Text>
+                    TF 1
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+        </Card>
+        <Card style={{ width: '105px' }}>
+            <Card.Img variant="top" src="holder.js/105px125" />
+            <Card.Body>
+                <Card.Title>TF1</Card.Title>
+                <Card.Text>
+                    TF 1
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+        </Card>
+        <Card style={{ width: '105px' }}>
+            <Card.Img variant="top" src="holder.js/105px125" />
+            <Card.Body>
+                <Card.Title>TF1</Card.Title>
+                <Card.Text>
+                    TF 1
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+        </Card>
+        <Card style={{ width: '105px' }}>
+            <Card.Img variant="top" src="holder.js/105px125" />
+            <Card.Body>
+                <Card.Title>TF1</Card.Title>
+                <Card.Text>
+                    TF 1
+                </Card.Text>
+                <Button variant="primary">Go somewhere</Button>
+            </Card.Body>
+        </Card>
+    );
+};
+
+export default Cards;
